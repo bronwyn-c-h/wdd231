@@ -261,3 +261,70 @@ svg {
   width: 24px;
   height: 24px;
 }
+
+.intro {
+  font-family: var(--bs-font-serif);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+.info > * {
+  flex: 1;
+}
+
+@media screen and (min-width: 630px) {
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 1em;
+}
+
+.media-card {
+  background: var(--bs-white);
+  border-radius: 0.5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.media-card__img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+}
+
+  .media-card a {
+    text-decoration: none;
+    color: var(--bs-black);
+  }
+  .media-card a:hover {
+    color: var(--bs-crete);
+  }
+  .media-card h3 {
+    margin: 0.5rem 0;
+  }
+  .media-card > p{
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: var(--bs-grey-2);
+  }
+
+  #park-footer {
+    background-image: url("../images/topo_pattern.png");
+    padding: 1.5em;
+  }
+  #park-footer h3 {
+    font-family: var(--bs-font-serif);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-top: 0.5rem;
+  }
+
