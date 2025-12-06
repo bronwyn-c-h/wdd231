@@ -176,7 +176,24 @@ const park = {
   weatherInfo:
     "Yellowstone's weather can vary quite a bit, even in a single day. In the summer, daytime highs can exceed 70°F (21°C), only to drop 20 or more degrees when a thunderstorm rolls through. It can snow during any month of the year, and winter lows frequently drop below 0°F (-18°C), especially at night. Bring a range of clothing options, including a warm jacket and rain gear, even in the summer.",
   name: "Yellowstone",
-  designation: "National Park"
+  designation: "National Park",
+  activities: [
+    { id: "1", name: "Astronomy" },
+    { id: "2", name: "Backpacking" },
+    { id: "3", name: "Biking" },
+    { id: "4", name: "Boating" },
+    { id: "5", name: "Camping" },
+    { id: "6", name: "Climbing" },
+    { id: "7", name: "Fishing" },
+    { id: "8", name: "Guided Tours" },
+    { id: "9", name: "Hiking" },
+    { id: "10", name: "Horseback Riding" },
+    { id: "11", name: "Hunting" },
+    { id: "12", name: "Photography" },
+    { id: "13", name: "Skiing" },
+    { id: "14", name: "Snowshoeing" },
+    { id: "15", name: "Wildlife Watching" }
+  ]
 };
 const parkInfoLinks = [
   {
@@ -228,6 +245,80 @@ export function getInfoLinks(data) {
 }
 
 export async function getParkData() {
-  const parkData = await getJson("parks?parkCode=yell");
-  return parkData.data[0];
+  // For now, return the static park data instead of making an API call
+  // const parkData = await getJson("parks?parkCode=yell");
+  // return parkData.data[0];
+  
+  return park;
+}
+
+export async function getParkAlerts(parkCode) {
+  // For now, return sample alerts data
+  // In a real implementation, this would fetch from: alerts?parkCode=${parkCode}
+  return [
+    {
+      id: "1",
+      title: "Grand View Point closing for construction weekdays August through September",
+      description: "Grand View Point Overlook, Grand View Point Trail, and 0.3 mi (0.5 km) of park road will close 6 am Mondays to 4 pm Thursdays for a total of eight weeks. The closure applies to all uses, including vehicles, tour buses, motorcycles, bikes, & hikers.",
+      category: "Park Closure",
+      url: ""
+    },
+    {
+      id: "2", 
+      title: "Seasonal climbing closures in effect",
+      description: "All climbers should ensure routes are not subject to wildlife seasonal closures. Many closures start March 1, March 15, or April 1 and continue through spring and summer.",
+      category: "Information",
+      url: ""
+    }
+  ];
+}
+
+export async function getParkVisitorCenters(parkCode) {
+  // For now, return sample visitor center data that matches the screenshot
+  return [
+    {
+      id: "1",
+      name: "Canyonlands Backcountry Office",
+      description: "The central backcountry office is located at park administrative offices south of Moab. Rangers can answer questions about backcountry travel over phone or email and issue permits online.",
+      directionsInfo: "Canyonlands administrative offices are about five miles south of Moab on US 191.",
+      operatingHours: [
+        {
+          description: "Open daily 8am-4:30pm"
+        }
+      ]
+    },
+    {
+      id: "2", 
+      name: "Hans Flat Ranger Station",
+      description: "The remote Hans Flat (Maze) Ranger Station is normally open daily year-round. This ranger contact station has a picnic table and vault toilet, and a small selection of books and maps for sale. There are no services, food, gas, trash collection, electricity for visitor use, nor potable water in The Maze. The nearest communities with amenities are Hanksville (88 miles) and Green River (86 miles).",
+      directionsInfo: "Getting to the Maze requires four-wheel-drive and a lot of time. To reach Hans Flat Ranger Station, from I-70 take UT 24 south for 24 miles. A left turn just beyond the turnoff to Goblin Valley State Park will take you along an unpaved, two-wheel-drive dirt road, 46 miles to the ranger station, blacktop. You can upgrade the road condition at any time. Roads beyond the ranger station require high clearance and four-wheel drive year-round.",
+      operatingHours: [
+        {
+          description: "Open daily year-round"
+        }
+      ]
+    },
+    {
+      id: "3",
+      name: "Island in the Sky Visitor Center", 
+      description: "Visitor center normally offers: exhibits, book & map sales, park orientation film, backcountry permits, general information, vault toilets, and park rangers on duty. You can get drinking water inside (during open hours) or outside 24 hours a day.",
+      directionsInfo: "On US 191, drive 10 miles north of Moab or 22 miles south of Interstate 70 (Crescent Junction), then take UT 313 southwest for 22 miles. Follow signs for Canyonlands National Park. Drive time from Moab is roughly 40 minutes to the visitor center.",
+      operatingHours: [
+        {
+          description: "Open daily 9am-4pm"
+        }
+      ]
+    },
+    {
+      id: "4",
+      name: "The Needles Visitor Center",
+      description: "The Needles Visitor Center normally offers exhibits, book & map sales, backcountry permits, information, picnic area, and park rangers on duty. The park orientation movie (15 minutes) is not currently showing. Water is available year-round. When the visitor center is closed in winter, you must self-register for backcountry permits outside the visitor center entrance.",
+      directionsInfo: "On US 191, drive 40 miles south of Moab, Utah, or 14 miles north of Monticello, Utah, then take UT 211 roughly 35 miles west. Highway 211 ends in The Needles, and is the only paved road leading in and out of the area.",
+      operatingHours: [
+        {
+          description: "Open daily 9am-5pm (March-October), 9am-4pm (November-February)"
+        }
+      ]
+    }
+  ];
 }

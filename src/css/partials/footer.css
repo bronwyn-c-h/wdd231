@@ -1,22 +1,22 @@
-.park-footer {
-  background-image: url("../images/topo_pattern.png");
+#park-footer {
+  background-image: url("../../images/topo_pattern.png");
   padding: 1.5rem;
 }
 
-.park-footer h3 {
+#park-footer h3 {
   font-family: var(--bs-font-serif);
   text-transform: uppercase;
   font-size: 0.8em;
   margin-top: 0.5rem;
 }
 
-.park-footer h4 {
+#park-footer h4 {
   margin-top: 0.8rem;
   margin-bottom: 0.5rem;
   font-size: 0.8em;
 }
 
-.park-footer p {
+#park-footer p {
   font-size: 0.8em;
   line-height: 1;
   color: var(--bs-grey-2);

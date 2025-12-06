@@ -21,8 +21,9 @@
 
 @media screen and (min-width: 630px) {
   .info {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 1em;
   }
 }
