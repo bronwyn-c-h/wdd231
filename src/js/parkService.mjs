@@ -322,3 +322,165 @@ export async function getParkVisitorCenters(parkCode) {
     }
   ];
 }
+
+export async function getParkVisitorCenterDetails(id) {
+  // For now, return detailed visitor center data based on ID
+  const centers = {
+    "1": {
+      id: "1",
+      name: "Canyonlands Backcountry Office",
+      description: "The central backcountry office is located at park administrative offices south of Moab. Rangers can answer questions about backcountry travel over phone or email and issue permits online. This office serves as the primary resource for planning backcountry trips in all districts of Canyonlands National Park.",
+      directionsInfo: "Canyonlands administrative offices are about five miles south of Moab on US 191. Look for the brown National Park Service sign on the west side of the highway.",
+      images: [
+        {
+          url: "https://www.nps.gov/common/uploads/structured_data/3C7A4FC2-1DD8-B71B-0B13118594AB6D8D.jpg",
+          altText: "Canyonlands Backcountry Office building exterior",
+          caption: "The Backcountry Office in Moab provides permits and information for backcountry exploration.",
+          credit: "NPS Photo"
+        }
+      ],
+      addresses: [
+        {
+          type: "Physical",
+          line1: "2282 Resource Blvd",
+          city: "Moab",
+          stateCode: "UT",
+          postalCode: "84532"
+        }
+      ],
+      amenities: [
+        "Parking",
+        "Restrooms",
+        "Information Desk",
+        "Permit Issuing",
+        "Maps and Books for Sale"
+      ],
+      contacts: {
+        emailAddresses: [
+          {
+            emailAddress: "canybackcountry@nps.gov"
+          }
+        ]
+      }
+    },
+    "2": {
+      id: "2",
+      name: "Hans Flat Ranger Station",
+      description: "The remote Hans Flat (Maze) Ranger Station is normally open daily year-round. This ranger contact station has a picnic table and vault toilet, and a small selection of books and maps for sale. There are no services, food, gas, trash collection, electricity for visitor use, nor potable water in The Maze. The nearest communities with amenities are Hanksville (88 miles) and Green River (86 miles).",
+      directionsInfo: "Getting to the Maze requires four-wheel-drive and a lot of time. To reach Hans Flat Ranger Station, from I-70 take UT 24 south for 24 miles. A left turn just beyond the turnoff to Goblin Valley State Park will take you along an unpaved, two-wheel-drive dirt road, 46 miles to the ranger station. Roads beyond the ranger station require high clearance and four-wheel drive year-round.",
+      images: [
+        {
+          url: "https://www.nps.gov/common/uploads/structured_data/3C7A525B-1DD8-B71B-0B8E8762A27E0777.jpg",
+          altText: "Hans Flat Ranger Station in remote desert landscape",
+          caption: "The Hans Flat Ranger Station serves visitors to the Maze District.",
+          credit: "NPS Photo"
+        }
+      ],
+      addresses: [
+        {
+          type: "Physical",
+          line1: "Hans Flat Road",
+          city: "Hanksville",
+          stateCode: "UT",
+          postalCode: "84734"
+        }
+      ],
+      amenities: [
+        "Vault Toilet",
+        "Picnic Table",
+        "Maps and Books for Sale",
+        "Ranger Information"
+      ],
+      contacts: {
+        emailAddresses: [
+          {
+            emailAddress: "canyinfo@nps.gov"
+          }
+        ]
+      }
+    },
+    "3": {
+      id: "3",
+      name: "Island in the Sky Visitor Center",
+      description: "The Island in the Sky visitor center is open year-round (except December 25). Rangers can answer questions, provide backcountry permits and current weather and road information. There are also books, maps, and other sales items. A short orientation video runs on request.",
+      directionsInfo: "From Moab, take Highway 191 north 10 miles. Turn left onto Highway 313 and travel 22 miles to the entrance station. Continue 1.3 miles to the visitor center.",
+      images: [
+        {
+          url: "https://www.nps.gov/common/uploads/structured_data/3C7A4E5A-1DD8-B71B-0B13CFF69C2DCBB4.jpg",
+          altText: "Island in the Sky Visitor Center building with red rock formations in background",
+          caption: "The Island in the Sky Visitor Center overlooks dramatic canyon vistas.",
+          credit: "NPS Photo"
+        }
+      ],
+      addresses: [
+        {
+          type: "Physical",
+          line1: "Island in the Sky District",
+          city: "Moab",
+          stateCode: "UT",
+          postalCode: "84532"
+        }
+      ],
+      amenities: [
+        "Parking",
+        "Restrooms",
+        "Water",
+        "Accessibility",
+        "Information Desk",
+        "Exhibits",
+        "Orientation Film",
+        "Maps and Books for Sale",
+        "Backcountry Permits"
+      ],
+      contacts: {
+        emailAddresses: [
+          {
+            emailAddress: "canyinfo@nps.gov"
+          }
+        ]
+      }
+    },
+    "4": {
+      id: "4",
+      name: "The Needles Visitor Center",
+      description: "The Needles visitor center is open year-round (except December 25). Rangers can answer questions, provide backcountry permits and current weather and road information. There are also books, maps, and other sales items available for purchase.",
+      directionsInfo: "From Monticello, take Highway 191 north 14 miles. Turn left onto Highway 211 and travel 34 miles to the visitor center, just past the entrance station.",
+      images: [
+        {
+          url: "https://www.nps.gov/common/uploads/structured_data/3C7A5127-1DD8-B71B-0B13B01FD5C7DFFB.jpg",
+          altText: "The Needles Visitor Center with distinctive rock spires visible",
+          caption: "The Needles Visitor Center provides access to the park's southeastern district.",
+          credit: "NPS Photo"
+        }
+      ],
+      addresses: [
+        {
+          type: "Physical",
+          line1: "The Needles District",
+          city: "Monticello",
+          stateCode: "UT",
+          postalCode: "84535"
+        }
+      ],
+      amenities: [
+        "Parking",
+        "Restrooms",
+        "Water",
+        "Accessibility",
+        "Information Desk",
+        "Exhibits",
+        "Maps and Books for Sale",
+        "Backcountry Permits"
+      ],
+      contacts: {
+        emailAddresses: [
+          {
+            emailAddress: "canyinfo@nps.gov"
+          }
+        ]
+      }
+    }
+  };
+
+  return centers[id] || null;
+}
