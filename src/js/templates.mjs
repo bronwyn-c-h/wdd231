@@ -147,3 +147,5 @@ export function vcContactsTemplate(data) {
 export function vcImageTemplate(data) {
   return `<li><img src="${data.url}" alt="${data.altText}" ><li>`;
 }
+
+
